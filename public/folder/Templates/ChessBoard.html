@@ -1,0 +1,239 @@
+﻿
+  
+
+<div data-ng-show="startmatch"  id="match">
+        <!--<div data-ng-repeat="p in onlinePlayer">-->
+<!--<div  data-ng-include ="'folder/Templates/chess.htm'"></div>-->
+<!--  
+    <span data-ng-if="userTwo!=null" style="font-weight:bold;">{{userTwo}} - {{userIdTwo}}</span>
+<div id="{{p.UserId}}" style="width: 400px" " ></div>
+<input type="submit" id="startGame" value="Start" data-ng-click="startGame()" />
+<input type="submit" id="stopGame" value="Clear" data-ng-click="clearGame()" />
+<input type="submit" id="flipBoard" value="Flip Board" data-ng-click="flipBoard()" />
+<span  data-ng-if="userOne!=null" style="font-weight:bold;">{{userOne}} - {{userIdOne}}</span>
+<p>Status: <span id="status"></span></p>
+<p>FEN: <span id="fen"></span></p>
+<p>PGN: <span id="pgn"></span></p> 
+            {{p.UserId}}
+    </div>-->
+      
+
+    
+
+
+
+    </div>
+ <h1>No of Online Users : {{onlineUserData.length}}</h1>
+<h3>{{date}}</h3>
+<h2 data-ng-click="mytestAlert()">Alert</h2>
+<section id="admin_block">
+<div class="container"><div class="row">
+
+<div class="col-sm-12">
+<div class="cover_grey">
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<div class="active_players">
+<div class="player_status_box">
+<ul>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_grey"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_grey"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_grey"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_grey"></span></a></li>
+<li><a href="#">Saif Ansari<span class="pull-right circle_green"></span></a></li>
+</ul>
+</div></div>
+</div>
+<div class="col-sm-4"></div>
+</div>
+</div></div>
+</div></div>
+</section>
+
+<script>
+    (function ($) {
+        $(window).on("load", function () {
+            $(".active_players").mCustomScrollbar({
+                setHeight: 450,
+                theme: "minimal-dark"
+            });
+        });
+    })(jQuery);
+	</script>
+
+<!--<table data-ng-init="init()">
+    <thead>
+        <tr>
+            <td>Username</td>
+            <td>UserId</td>
+        </tr>
+
+        
+    </thead>
+    <tbody>
+    <tr data-ng-repeat="player in onlineUserData">
+        <td>
+           <a data-ui-sref="Game({'UserId':player.UserId})" data-ng-click="scheduleMatch(player.UserId,player.SocketId)" > {{player.Username}}</a></td>
+        <td>
+           <a data-ui-sref="Game({'UserId':player.UserId})"  data-ng-click="scheduleMatch(player.UserId,player.SocketId)" > {{player.UserId}}</a></td>
+
+              <!--  <h2>Multiple Timers Example</h2> -- 
+        <h3>Timer 1: <timer/></h3>
+        <h3>Timer 2: <timer interval="2000"/></h3>
+        <h3>Timer 3: <timer> minutes,  seconds.</timer></h3>
+          <h3><timer countdown="0" interval="1000">{{minutes}} : {{seconds}}</timer></h3>
+            <h3><timer countdown="10" interval="1000"></timer></h3>
+        <button ng-click="startTimer()" ng-disabled="timerRunning">Start Timers</button>
+        <button ng-click="stopTimer()" ng-disabled="!timerRunning">Stop Timers</button>
+
+        ---------------Countdown--------------------
+
+        <p>{{counter}}</p>
+        Min: {{counterMin}} : Sec {{counterSec}}
+    <button ng-click="stop()">Stop</button>
+    <button ng-click="countdown()">Start</button>   
+    </tr>
+
+   
+        </tbody>
+
+</table>-->  
+
+<div id="minimal" >
+    <div class="demo">  </div>
+</div>
+
+<!--<div id="big" >
+    <div class="demo">  </div>
+</div>-->
+<div id="singleElimination" >
+    <div class="demo">  </div>
+</div>
+<div id="matches" >
+    <div id="matchCallback">    </div>
+    <div class="demo">  </div>
+</div>
+
+
+
+
+
+
+
+<!--<script type="text/javascript">
+    var minimalData = {
+        teams: [
+          ["Team 1", "Team 2", "Team 3"], /* first matchup */
+          ["Team 4", "Team 5", "Team 6"]  /* second matchup */
+        ],
+        results: [
+          [[1, 2,3], [4, 5,6]],       /* first round */
+          [[4, 6], [2, 1]],       /* second round */
+           [[2, 1]]
+        ]
+    }
+
+    $(function () {
+        $('#minimal .demo').bracket({
+            init: minimalData /* data to initialize the bracket with */
+        })
+    })
+
+    var bigData = {
+        teams: [
+          ["Team 1", "Team 2"],
+          ["Team 3", "Team 4"],
+          ["Team 5", "Team 6"],
+          ["Team 7", "Team 8"],
+          ["Team 9", "Team 10"],
+          ["Team 11", "Team 12"],
+          ["Team 13", "Team 14"],
+          ["Team 15", "Team 16"]
+        ],
+        results: [[ /* WINNER BRACKET */
+          [[3, 5], [2, 4], [6, 3], [2, 3], [1, 5], [5, 3], [7, 2], [1, 2]],
+          [[1, 2], [3, 4], [5, 6], [7, 8]],
+          [[9, 1], [8, 2]],
+          [[1, 3]]
+        ], [         /* LOSER BRACKET */
+          [[5, 1], [1, 2], [3, 2], [6, 9]],
+          [[8, 2], [1, 2], [6, 2], [1, 3]],
+          [[1, 2], [3, 1]],
+          [[3, 0], [1, 9]],
+          [[3, 2]],
+          [[4, 2]]
+        ], [         /* FINALS */
+          [[3, 8], [1, 2]],
+          [[2, 1]]
+        ]]
+    }
+
+    $(function () { $('div#big .demo').bracket({ init: bigData }) })
+
+    var singleElimination = {
+        "teams": [              // Matchups
+          ["Team 1", "Team 2"], // First match
+          ["Team 3", "Team 4"]  // Second match
+        ],
+        "results": [            // List of brackets (single elimination, so only one bracket)
+          [                     // List of rounds in bracket
+            [                   // First round in this bracket
+              [1, 2],           // Team 1 vs Team 2
+              [3, 4]            // Team 3 vs Team 4
+            ],
+            [                   // Second (final) round in single elimination bracket
+              [5, 6],           // Match for first place
+              [7, 8]            // Match for 3rd place
+            ]
+          ]
+        ]
+    }
+
+    $(function () { $('div#singleElimination .demo').bracket({ init: singleElimination }) })
+
+
+    var matchData = {
+        teams: [
+          ["Team 1", "Team 2"],
+          ["Team 3", "Team 4"]
+        ],
+        results: [
+          [[4, 3, 'Match 1'], [3, 4, 'Match 2']],
+          [[8, 6, 'Final'], [2, 3, 'Consolation final']]
+        ]
+    }
+
+    function onclick(data) {
+        $('#matchCallback').text("onclick(data: '" + data + "')")
+    }
+
+    function onhover(data, hover) {
+        $('#matchCallback').text("onhover(data: '" + data + "', hover: " + hover + ")")
+    }
+
+    $(function () {
+        $('#matches .demo').bracket({
+            init: matchData,
+            onMatchClick: onclick,
+            onMatchHover: onhover
+        })
+    })
+
+
+</script>-->
+  
+<!--<div>
+    <h2>Plain JavaScript - Timer Example</h2>
+ <h3><timer countdown="10" interval="1000">{{countdown}}</timer></h3>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stopTimer()">Stop Timer</button>
+</div>
+<br/>-->
+

@@ -1,0 +1,29 @@
+{
+  "name": "chessDunitech",
+  "version": "1.0.0",
+  "description": "app.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "gcloud preview app deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arpad": "^0.1.2",
+    "biguint-format": "^1.0.0",
+    "elo-js": "^1.0.1",
+    "elo-rating": "^1.0.1",
+    "express": "^4.14.0",
+    "flake-idgen": "^1.1.0",
+    "fs": "0.0.1-security",
+    "node-uuid": "^1.4.7",
+    "nodemailer": "^2.6.4",
+    "socket.io": "^1.4.8",
+    "underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": "4.4.7"
+  }
+}

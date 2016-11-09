@@ -1,0 +1,46 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Chess Table Point </h4>
+</div>
+<div class="modal-body">
+  <table>
+      <tr>
+          <td><label>User Id</label></td>
+          <td>{{UserDetails.UserId}}</td>
+      </tr>
+          <tr>
+          <td><label><img src="../../../img/chesspieces/wikipedia/wP.png" style="height:30px;" /> Pawn</label></td>
+          <td><input type="text" data-ng-model="pointtable.pawn" /></td>
+      </tr>
+          <tr>
+          <td><label><img src="../../../img/chesspieces/wikipedia/wN.png" style="height:30px;" /> Knight</label></td>
+          <td><input type="text" data-ng-model="pointtable.knight" /></td>
+      </tr>
+          <tr>
+          <td><label><img src="../../../img/chesspieces/wikipedia/wB.png" style="height:30px;" /> Bishop</label></td>
+          <td><input type="text" data-ng-model="pointtable.bishop" /></td>
+      </tr>
+          <tr>
+          <td><label><img src="../../../img/chesspieces/wikipedia/wR.png" style="height:30px;" /> Rook</label></td>
+          <td><input type="text" data-ng-model="pointtable.rook" /></td>
+      </tr>
+          <tr>
+          <td><label><img src="../../../img/chesspieces/wikipedia/wQ.png" style="height:30px;"/> Queen</label></td>
+          <td><input type="text" data-ng-model="pointtable.queen" /></td>
+      </tr>
+             <tr>
+          <td><label> Winning Chess Game Points</label></td>
+          <td><input type="text" data-ng-model="pointtable.winningPoints" /></td>
+      </tr>
+          <tr>
+          <td><label>Is Default</label></td>
+          <td><input type="checkbox" data-ng-model="pointtable.IsDefault" /></td>
+      </tr>    
+  </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="$dismiss()">Close</button>
+    <button type="button"  data-ng-show="!isEdit" class="btn btn-primary" ng-click="saveSetup(pointtable,1);$close()">Save changes</button>
+        <button type="button" data-ng-show="isEdit"class="btn btn-primary" ng-click="saveSetup(pointtable,2);$close()">Update changes</button>
+</div>

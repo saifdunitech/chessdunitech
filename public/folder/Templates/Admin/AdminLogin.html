@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
+    <link href="folder/Content/support.css" rel="stylesheet" />
+    <link href="folder/Content/responsive.css" rel="stylesheet" />
+    <link href="folder/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+       <script src="folder/Scripts/toaster.js"></script>
+          <script src="folder/Scripts/underscore.js"></script>
+          <script src="folder/Scripts/angular-cookies.js"></script>  
+            <script src="folder/Scripts/MyScript/Modules.js"></script>
+      <script src="folder/Scripts/MyScript/Controllers.js"></script>
+      <script src="folder/Scripts/MyScript/Services.js"></script>
+      <script src="folder/Scripts/MyScript/Directive.js"></script>
+          <link href="folder/Content/toaster.css" rel="stylesheet" />
+      <link href="folder/Content/Site.css" rel="stylesheet" />
+      <link href="folder/Content/style.css" rel="stylesheet" />
+     <link href="folder/Content/onlinechessgame.css" rel="stylesheet" />
+      <link href="folder/Content/ng-table.min.css" rel="stylesheet" />
+      <link href="folder/Content/bootstrap.min.css" rel="stylesheet" />
+         <script src="folder/Scripts/bootstrap.min.js"></script>
+
+
+      <script src="folder/Scripts/jquery.min.js"></script>
+  </head>
+
+<body>
+    <form id="loginform" data-ng-submit="login(admindata)" novalidate data-ng-init="init()">
+<div class="content left">
+       <h1 class="page-title no-padding">Login</h1>
+    <div id="c2"><div id="c6"></div> </div>  
+        <ul class="form login">
+        <li><label for="c1">Username or Email:</label><input placeholder="Username or Email Id" data-ng-model="admindata.Username" type="text" name="c1" id="c1" value="" class="inputText" maxlength="60"> </li>
+        <li><label for="loginpassword">Password:</label><input placeholder="" type="password" data-ng-model="admindata.Password" name="loginpassword" id="loginpassword" value="" class="inputText reset-margin-bottom" maxlength="200"><p class="instructions"><a href="/forgot">Forgot your password? Click here!</a></p> </li>
+        <li><span id="c3_ctl"></span> </li> <!-- is this used?? -->
+        <li><span id="c4_ctl"></span> </li> <!-- is this used?? -->
+        <li><label></label><div style="display:inline" id="rememberme_ctl"><input type="checkbox" id="rememberme" name="rememberme" class="checkbox"></div> <span class="checkbox-name grey">Remember me</span></li>
+        <li class="actions">
+            <button type="submit" name="btnLogin" id="btnLogin" class="button-submit xlarge">Login<span class="utility arrow-right white left-8"></span></button> <span id="c5" style="display:none;"><img src="https://cssjs.chesscomfiles.com/assets/images/spinner_14.gif" width="14" height="14" alt="Please Wait..."></span>         </li>
+    </ul>
+
+</div>
+
+    </form>
+    </body>
+</html>

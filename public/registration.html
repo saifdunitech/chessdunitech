@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="folder/Content/support.css" rel="stylesheet" />
+    <link href="folder/Content/responsive.css" rel="stylesheet" />
+    <link href="folder/Content/font-awesome.min.css" rel="stylesheet" />
+
+     <script src="folder/Scripts/angular.js"></script>
+       <script src="folder/Scripts/toaster.js"></script>
+          <script src="folder/Scripts/underscore.js"></script>
+          <script src="folder/Scripts/angular-cookies.js"></script>  
+            <script src="folder/Scripts/MyScript/Modules.js"></script>
+      <script src="folder/Scripts/MyScript/Controllers.js"></script>
+      <script src="folder/Scripts/MyScript/Services.js"></script>
+      <script src="folder/Scripts/MyScript/Directive.js"></script>
+          <link href="folder/Content/toaster.css" rel="stylesheet" />
+      <link href="folder/Content/Site.css" rel="stylesheet" />
+      <link href="folder/Content/style.css" rel="stylesheet" />
+     <link href="folder/Content/onlinechessgame.css" rel="stylesheet" />
+      <link href="folder/Content/ng-table.min.css" rel="stylesheet" />
+      <link href="folder/Content/bootstrap.min.css" rel="stylesheet" />
+         <script src="folder/Scripts/bootstrap.min.js"></script>
+
+
+      <script src="folder/Scripts/jquery.min.js"></script>
+  </head>
+
+<body>
+    <form name="playerRegister" class="myForm" data-ng-submit="registerPlayer(player) && playerRegister.$isvalid" data-ng-init="init()" novalidate>
+ 
+<section id="login_bg">
+<div class="trans_layer">
+<div class="login_box_cover"><div align="center"><img src="Images/logo_white.png" alt="logo"></div>
+<div class="container">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10"><div class="cover_main"><h2>Register here</h2>
+<hr>
+<div class="row"><div class="col-sm-6">
+<div class="form-group">
+<label>Username</label>
+   <input type="text" name="Username" data-ng-model="player.Username" data-ng-minlength="3"
+                    data-ng-maxlength="8" required />{{player.Username}}
+                
+        
+                 <div data-ng-messages="playerRegister.Username.$error">
+                     <p data-ng-message="minlength">Your name is too short.</p>
+                     <p data-ng-message="maxlength">Your name is too long.</p>
+                     <p data-ng-message="required">Your name is required.</p>
+                 </div>
+</div>
+</div>
+
+
+
+<div class="col-sm-6">
+<div class="form-group">
+<label>Email</label>
+         <input type="email" name="EmailId" data-ng-model="player.EmailId" required />
+             <div data-ng-show="playerRegister.EmailId.$dirty && playerRegister.EmailId.$invalid">
+                 Invalid:
+         <span data-ng-show="playerRegister.EmailId.$error.required">Tell us your email.</span>
+         <span data-ng-show="playerRegister.EmailId.$error.email">This is not a valid email.</span>
+     </div>
+</div>
+</div>
+
+    <div class="col-sm-6">
+<div class="form-group">
+<label>Password</label>
+ <input type="password" name="Password" data-ng-model="player.Password" required />
+                <div data-ng-messages="playerRegister.Password.$error">
+                    <div data-ng-message="required">This is required.</div>
+                </div>
+</div>
+</div>
+
+
+<div class="col-sm-6">
+<div class="form-group">
+<label>Retype Password</label>
+<input type="password" data-ng-model="player.Repassword" />
+</div>
+</div>
+
+</div>
+
+<div class="form-group"><div class="row">
+<div class="col-sm-6"><div class="txt_right">
+    <button type="submit" class="btn btn-warning btn-block" data-ng-disabled="playerRegister.player.$invalid"><h4>Register Me</h4></button></div></div>
+<div class="col-sm-6"></div>
+</div></div>
+
+<hr>
+<p>Have already account? <a data-ui-sref="Login">Sign In</a></p>
+
+</div></div>
+<div class="col-sm-1"></div>
+</div></div></div>
+</div></section>
+        </form>
+     <script src="folder/Scripts/bootstrap.min.js"></script>
+
+
+      <script src="folder/Scripts/jquery.min.js"></script>
+</body>
+</html>

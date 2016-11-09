@@ -1,0 +1,51 @@
+﻿<form name="playerRegister" class="myForm" data-ng-submit="registerPlayer(player) && playerRegister.$isvalid" data-ng-init="init()" novalidate>
+    <table id="tblContainer" >
+        <tr>
+            <td>Username</td>
+            <td>
+                <input type="text" name="Username" data-ng-model="player.Username" data-ng-minlength="3"
+                    data-ng-maxlength="8" required />{{player.Username}}
+                
+        
+                 <div data-ng-messages="playerRegister.Username.$error">
+                     <p data-ng-message="minlength">Your name is too short.</p>
+                     <p data-ng-message="maxlength">Your name is too long.</p>
+                     <p data-ng-message="required">Your name is required.</p>
+                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" name="Password" data-ng-model="player.Password" required />
+                <div data-ng-messages="playerRegister.Password.$error">
+                    <div data-ng-message="required">This is required.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Re-type Password</td>
+            <td>
+                <input type="password" data-ng-model="player.Repassword" /></td>
+        </tr>
+        <tr>
+            <td>Email Id</td>
+            <td>
+                <input type="email" name="EmailId" data-ng-model="player.EmailId" required />
+             <div data-ng-show="playerRegister.EmailId.$dirty && playerRegister.EmailId.$invalid">
+                 Invalid:
+         <span data-ng-show="playerRegister.EmailId.$error.required">Tell us your email.</span>
+         <span data-ng-show="playerRegister.EmailId.$error.email">This is not a valid email.</span>
+     </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-primary" data-ng-disabled="playerRegister.player.$invalid">Register</button>
+            </td>
+
+        </tr>
+    </table>
+</form>
+

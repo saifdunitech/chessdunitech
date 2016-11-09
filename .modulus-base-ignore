@@ -1,0 +1,9 @@
+.git/
+.modulus-base-ignore
+.modulusignore
+.meteor/local/
+modulus-auto-zip-*
+__MACOSX/
+.DS_Store
+
+node_modules

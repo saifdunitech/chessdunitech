@@ -1,0 +1,103 @@
+﻿<div class="lichess_overboard game_config game_config_hook " data-random-color-variants="5,6,9,7,8" data-anon="1">
+  <a href="/" class="close icon" title="Cancel" data-icon="L"></a>
+  <h2>Create a game</h2>
+  
+   
+
+<form action="/setup/hook/uid-placeholder" method="POST" novalidate="novalidate">
+    
+  
+
+<div class="variant label_select">
+  <label for="variant">Variant</label>
+  
+<select id="variant" name="variant">
+  
+  <option value="1" class="variant_1" title="Standard rules of chess (FIDE)" selected="selected">Standard</option>
+  
+  <option value="10" class="variant_10" title="Captured pieces can be dropped back on the board instead of moving a piece.">Crazyhouse</option>
+  
+  <option value="2" class="variant_2" title="Starting position of the home rank pieces is randomized.">Chess960</option>
+  
+  <option value="4" class="variant_4" title="Bring your King to the center to win the game.">King of the Hill</option>
+  
+  <option value="5" class="variant_5" title="Check your opponent 3 times to win the game.">Three-check</option>
+  
+  <option value="6" class="variant_6" title="Lose all your pieces (or reach a stalemate) to win the game.">Antichess</option>
+  
+  <option value="7" class="variant_7" title="Nuke your opponent's king to win.">Atomic</option>
+  
+  <option value="8" class="variant_8" title="Destroy the horde to win!">Horde</option>
+  
+  <option value="9" class="variant_9" title="Race your King to the eighth rank to win.">Racing Kings</option>
+  
+</select>
+
+</div>
+
+
+
+
+<div class="time_mode_config optional_config">
+  <div class="label_select">
+    <label for="timeMode">Time control</label>
+    
+<select id="timeMode" name="timeMode">
+  
+  <option value="1" class="timeMode_1" selected="selected">Real time</option>
+  
+  <option value="2" class="timeMode_2" disabled="" title="You need an account to do that">Correspondence</option>
+  
+  <option value="0" class="timeMode_0" disabled="" title="You need an account to do that">Unlimited</option>
+  
+</select>
+
+  </div>
+  <div class="time_choice slider">
+    Minutes per side: <span>0</span>
+    
+
+<input id="time" name="time" value="0.0" style="display: none;"><div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span></div>
+
+  </div>
+  <div class="increment_choice slider">
+    Increment in seconds: <span>45</span>
+    
+
+<input id="increment" name="increment" value="45" style="display: none;"><div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 83.3333%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 83.3333%;"></span></div>
+
+  </div>
+  <div class="correspondence">
+    <div class="days_choice slider" style="display: none;">
+      Days per turn: <span>2</span>
+      
+
+<input id="days" name="days" value="2" style="display: none;"><div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 16.6667%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 16.6667%;"></span></div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="color_submits">
+    
+    <button data-hint="Black" type="submit" class="button hint--bottom black" name="color" value="black">
+      <i></i>
+    </button>
+    
+    <button data-hint="Random side" type="submit" class="button hint--bottom random" name="color" value="random">
+      <i></i>
+    </button>
+    
+    <button data-hint="White" type="submit" class="button hint--bottom white" name="color" value="white">
+      <i></i>
+    </button>
+    
+  </div>
+  
+</form>
+
+  
+  
+</div>

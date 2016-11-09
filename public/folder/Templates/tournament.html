@@ -1,0 +1,165 @@
+
+<section id="tourna_ment_section">
+    <div class="container" data-ng-init="init()">
+        <div class="row">
+            <div class="tourna_ment_block">
+                <div class="tournament_block55">
+                    <div class="row" > 
+                   
+                        <div class="col-sm-4" data-ng-repeat="t in tournament track by $index"> 
+                            <div class="tournament_cover">
+                                <h4>{{t.TournamentName}}</h4>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="txt_bold"><span class="dategreen">Start Date</span></p>
+                                        <p>{{ToWcfDate(t.T_StartDate)| date:'dd/MM/yyyy'}}</p>
+                                        <p class="txt_bold">Number of Players</p>
+                                        <p>( {{t.noOfAvaiablePlayers}} / {{t.NoOfPlayers}} )</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div align="right">
+                                            <p class="txt_bold"><span class="datered">End Date</span></p>
+                                         <p>{{ToWcfDate(t.T_EndDate) | date:'dd/MM/yyyy'}}</p>
+                                          
+                                            <button data-ng-if="t.isAlreadyJoin" data-ng-disabled="t.isAlreadyJoin" class="btn btn-warning" style="margin-right:5px;">AlreadyJoin</button>
+                                              <button data-ng-if="!t.isAlreadyJoin" data-ng-disabled="t.isAlreadyJoin || (t.noOfAvaiablePlayers==t.NoOfPlayers)"  class="btn btn-warning" data-ng-click="joinTournament(t)" >Join</button>
+                                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                        
+          <div class="clearfix"></div>
+</div>
+</div></div><div class="col-sm-12"></div>
+</div>
+        
+</div></section>
+
+
+
+                        <script> $(document).ready(function () {
+     $('.progress .progress-bar').css("width",
+               function () {
+                   return $(this).attr("aria-valuenow") + "%";
+               }
+       )
+ });</script>
+
+                        <!--  scrollbar-->
+
+                        <script>
+                           
+                            //(function ($) {                              
+                            //        $(window).on("load", function () {
+                            //            $(".tournament_block55").mCustomScrollbar({
+                            //                setHeight: 450,
+                            //                theme: "minimal-dark"
+                            //            });
+                            //        });                           
+                            //})(jQuery);
+                     
+                        </script>
+
+                        <!--<script>
+                            // Vars
+
+                            var wrapper = $("#site-wrapper"),
+                                menu = $(".menu"),
+                                menuLinks = $(".menu ul li a"),
+                                toggle = $(".nav-toggle"),
+                                toggleIcon = $(".nav-toggle span");
+
+                            function toggleThatNav() {
+                                if (menu.hasClass("show-nav")) {
+                                    if (!Modernizr.csstransforms) {
+                                        menu.removeClass("show-nav");
+                                        toggle.removeClass("show-nav");
+                                        menu.animate({
+                                            left: "-=300"
+                                        }, 500);
+                                        toggle.animate({
+                                            left: "-=300"
+                                        }, 500);
+                                    } else {
+                                        menu.removeClass("show-nav");
+                                        toggle.removeClass("show-nav");
+                                    }
+
+                                } else {
+                                    if (!Modernizr.csstransforms) {
+                                        menu.addClass("show-nav");
+                                        toggle.addClass("show-nav");
+                                        menu.css("left", "0px");
+                                        toggle.css("left", "330px");
+                                    } else {
+                                        menu.addClass("show-nav");
+                                        toggle.addClass("show-nav");
+                                    }
+                                }
+                            }
+
+                            function changeToggleClass() {
+                                toggleIcon.toggleClass("fa-times");
+                                toggleIcon.toggleClass("fa-bars");
+                            }
+
+                            $(function () {
+                                toggle.on("click", function (e) {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    toggleThatNav();
+                                    changeToggleClass();
+                                });
+                                // Keyboard Esc event support
+                                $(document).keyup(function (e) {
+                                    if (e.keyCode == 27) {
+                                        if (menu.hasClass("show-nav")) {
+                                            if (!Modernizr.csstransforms) {
+                                                menu.removeClass("show-nav");
+                                                toggle.removeClass("show-nav");
+                                                menu.css("left", "-300px");
+                                                toggle.css("left", "30px");
+                                                changeToggleClass();
+                                            } else {
+                                                menu.removeClass("show-nav");
+                                                toggle.removeClass("show-nav");
+                                                changeToggleClass();
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                        </script>-->
+
+
+                        <!--<script>
+                            $(function () {
+                                var Accordion = function (el, multiple) {
+                                    this.el = el || {};
+                                    this.multiple = multiple || false;
+
+                                    // Variables privadas
+                                    var links = this.el.find('.link');
+                                    // Evento
+                                    links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
+                                }
+
+                                Accordion.prototype.dropdown = function (e) {
+                                    var $el = e.data.el;
+                                    $this = $(this),
+                                    $next = $this.next();
+
+                                    $next.slideToggle();
+                                    $this.parent().toggleClass('open');
+
+                                    if (!e.data.multiple) {
+                                        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                                    };
+                                }
+
+                                var accordion = new Accordion($('#accordion'), false);
+                            });
+                        </script>-->

@@ -1,0 +1,120 @@
+<!doctype >
+<html>
+  <head>
+    <title>Chess</title>  
+      <script src="folder/Scripts/jquery.min.js"></script>
+      <script src="folder/Scripts/jquery-ui.js"></script>
+      <script src="folder/Scripts/angular.js"></script>
+      <script src="folder/Scripts/angular-resource.js"></script>
+      <script src="folder/Scripts/angular-ui-router.js"></script>
+      <script src="folder/Scripts/angular-animate.js"></script>
+      <script src="folder/Scripts/angular-messages.js"></script>
+      <script src="folder/Scripts/toaster.js"></script>
+      <script src="folder/Scripts/underscore.js"></script>
+      <script src="folder/Scripts/ng-table.js"></script>
+      <script src="folder/Scripts/angular-sanitize.js"></script>
+      <script src="folder/Scripts/angular-cookies.js"></script>  
+              <script src="folder/Scripts/moment.min.js"></script>
+
+      <script src="folder/Scripts/angular-moment.min.js"></script> 
+            <!-- For alert confirmbox or prompt message -->
+      <script src="folder/Scripts/bootbox.min.js"></script>
+ <!--     Email send-->
+
+    <script src="http://smtpjs.com/smtp.js"></script>
+
+      <script src="folder/Scripts/humanize-duration.js"></script>
+      <script src="folder/Scripts/angular-timer.min.js"></script>
+  
+      <script src="folder/Scripts/ui-bootstrap-tpls.js"></script>
+     <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+<!--<script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>-->
+    <!--  <script src="folder/Chessboard/socket.io-1.0.0.js"></script>-->
+  <!--    <script src="folder/Chessboard/socket.io.js"></script>-->
+      <script src="folder/Chessboard/socket.io-1.0.6.js"></script>
+         <script src="folder/chess.js"></script> 
+    <script src="folder/chessboard-0.3.0.js"></script> 
+
+
+      <script src="folder/Scripts/jquery.bracket.min.js"></script>
+
+    
+<!--    <script src="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.min.js"></script>
+
+            <link href="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.css" rel="stylesheet" />-->
+
+             <script src="folder/Scripts/MyScript/Modules.js"></script>
+      <script src="folder/Scripts/MyScript/Controllers.js"></script>
+      <script src="folder/Scripts/MyScript/Services.js"></script>
+      <script src="folder/Scripts/MyScript/Directive.js"></script>
+   <link rel="stylesheet" type="text/css" href="chessboard-0.3.0.css"/>
+      <link href="folder/Content/toaster.css" rel="stylesheet" />
+      <link href="folder/Content/Site.css" rel="stylesheet" />
+      <link href="folder/Content/style.css" rel="stylesheet" />
+     <link href="folder/Content/onlinechessgame.css" rel="stylesheet" />
+      <link href="folder/Content/ng-table.min.css" rel="stylesheet" />
+  <link href="folder/Content/bootstrap.min.css" rel="stylesheet" />
+          <link href="folder/Content/support.css" rel="stylesheet" />
+<!--    <link href="folder/Content/responsive.css" rel="stylesheet" />-->
+    <link href="folder/Content/font-awesome.min.css" rel="stylesheet" />
+      
+    <link href="folder/Content/jquery.mCustomScrollbar.css" rel="stylesheet" />
+  
+      <link href="folder/Content/jquery-ui.css" rel="stylesheet" />
+      <link href="folder/Content/jquery.bracket.min.css" rel="stylesheet" />
+
+     
+    </head>
+    <body  data-ng-app="App"  ng-cloak>
+
+      
+<!--<div ui-view></div>-->
+        <div ui-view="header"></div>
+            <section id="content_box">
+    
+    <div class="container">
+       <div ui-view="content">
+<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+       </div>
+        </div>
+                </section>
+
+            <section class="content-wrapper main-content clear-fix">           
+<!--              <toaster-container toaster-options="{'time-out': 3000,'spinner':false}"></toaster-container>-->
+                <toaster-container toaster-options="{
+  'close-button': false,
+  'debug': false,
+  'position-class': 'toast-top-right',
+  'onclick': null,
+  'showDuration': '200',
+  'hideDuration': '1000',
+  'timeOut': '5000',
+  'extendedTimeOut': '1000',
+  'showEasing': 'swing',
+  'hideEasing': 'linear',
+  'showMethod': 'fadeIn',
+  'hideMethod': 'fadeOut',
+  'animation-class': 'toast-top-right'
+}"></toaster-container>
+         <!--     <div  id="loadimage" >
+                    <img class="loadingImage" src="~/Images/loading.gif">
+
+                    </img>
+                </div>-->
+            </section>
+            <section id="footer_main"><div class="container"><div class="row"><div class="col-sm-12"><p>Online Multiplayers Chess 2016 @ Developed by Saif.Ansari2 at Dunitech </p></div></div></div></section>
+
+     
+    <script src="folder/Scripts/modernizr.min.js"></script>
+
+    <script src="folder/Scripts/bootstrap.min.js"></script>
+
+    <script src="folder/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+    
+    </body>
+
+</html>

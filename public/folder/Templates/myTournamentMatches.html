@@ -1,0 +1,141 @@
+﻿
+
+<section id="admin_block"  data-ng-init="init()">
+<div class="container"><div class="row">
+
+<div class="col-sm-12">
+
+<div class="cover_grey need_padding">
+<div class="tournament_block55">
+<h3>My Tournament</h3>
+<div class="table-responsive adm_cl my_tournament"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Tournament Name</th>
+<th>Start Date</th>
+    <th>Start Time</th>
+<th>End Date</th>
+<th>End Time</th>
+     <th>No Of Players / Avaiable Players</th>
+    <th>View</th>
+</tr>
+</thead>
+<tbody data-ng-repeat="t in allMyTournamentList">
+<tr>
+<td> {{t.TournamentName}}</td>
+<td>{{ ToWcfDate(t.T_StartDate) | date:'dd-MMM-yyyy'}}</td>
+    <td>{{ToWcfDate(t.T_StartTime) | date:'hh:mm a'}}</td>
+<td>{{ToWcfDate(t.T_EndDate) | date:'dd-MMM-yyyy'}}</td>
+        <td>{{ToWcfDate(t.T_EndTime) | date:'hh:mm a'}}</td>
+        <td>( {{t.NoOfPlayers}} / {{t.noOfAvaiablePlayers}} )</td>
+    <td><div class="btn btn-default"  data-ng-click="viewMatchesRounds(t)" >View</div> </td>
+</tr>
+</tbody>
+</table></div>
+
+    
+    <fieldset> 
+        <legend>Tournament Name : {{TournamentName}} Total Rounds : {{totalRounds}}</legend>
+<div class="white_block">
+    <div class="table-responsive adm_cl">
+
+        <table class="table table-bordered" data-ng-if="linkDetails.length>0">
+            <thead>
+                <th>Round (s)</th>
+                <th>Matches</th>
+                <th>Status</th>
+                 <th>Winner</th>
+            </thead>
+<tbody data-ng-repeat="r in linkDetails">
+<tr>
+<td width="20%"><h5 class="txt_bold">Round ( {{r.RoundNo}} )</h5></td>
+<td width="60%"><h5> {{r.Username}}  Vs {{r.OpponentUsername}}</h5></td>
+<td width="40%"><div>
+    <div data-ng-if="r.LinkStatus==1 && r.isReadyToPlay==true" class="btn  btn-info  btn-sm" data-ng-click="scheduleTournament(r,false)">Play Match</div> 
+   <div data-ng-if="r.LinkStatus>1"class="btn  btn-info  btn-sm">Already Played</div>
+     <div data-ng-if="r.isReadyToPlay!=true" class="btn  btn-info  btn-sm" data-ng-click="scheduleTournament(r,r.isReadyToPlay)">View Match</div> 
+
+                </div></td>
+    <td>
+         <div>{{r.winnerName}}</div>
+           <div></div>
+    </td>
+</tr>
+ <tr data-ng-if="linkDetails.length==0">
+    
+           <span data-ng-if="linkDetails.length==0"> Please Wait for Link to play Tournament</span>
+   
+ </tr>
+  
+
+<!--<tr>
+<td width="20%"><h5 class="txt_bold">Round (2)</h5></td>
+<td width="60%"><h5>Ankit Vs Saif</h5></td>
+<td width="40%"><div><a href="#" class="btn btn-warning btn-sm">Play Match</a> <a href="#" class="btn btn-info btn-sm">Already Played</a></div></td>
+</tr>-->
+</tbody>
+</table>
+
+    </div></div>
+        </fieldset>
+
+</div></div></div>
+</div></div>
+</section>
+
+<div class="white_block2" data-ng-if="tournamentWinnerName!=null"><div class="container"><div class="row">
+<div class="col-sm-12"><h4>Winnner of Tournament</h4>
+<h2>{{tournamentWinnerName}}</h2>
+</div>
+</div></div></div>
+
+
+
+
+
+
+<!--<div class="col-sm-12" data-ng-init="init()" >
+        My Tournament
+<div style="border:3px solid blue" >
+    <div class="row">
+        <div class="col-sm-12">
+        
+            <div>
+              
+           
+                
+            </div>
+       
+        </div>
+    </div>
+</div>
+    <div style="border:3px solid red" data-ng-repeat="r in linkDetails">
+    <div class="row" data-ng-show="linkDetails.length>0">
+        <div class="col-sm-12">
+        
+            <div>
+               <div data-ng-if="currentUser==r.Username" data-ng-click="scheduleTournament(r)" >
+                
+                   {{r.Username}}  Vs {{r.OpponentUsername}}
+                   <span data-ng-click="scheduleTournament(r)">Play Match</span>
+                   <!--    <a data-ui-sref="TournamentMatch({UserId:r.TableId,Round:r.RoundNo,T_Id:r.T_Id,Color:r.UserIdColor})">Play Match</a>
+            
+                </div>
+                   <div data-ng-if="currentUser==r.OpponentUsername" >
+                        <span data-ng-click="scheduleTournament(r)">Play Match</span>
+                        <!--<a data-ui-sref="TournamentMatch({UserId:r.TableId,Round:r.RoundNo,T_Id:r.T_Id,Color:r.OpponentIdColor})">Play Match</a>
+                   {{r.Username}}  Vs {{r.OpponentUsername}}
+                </div>
+          
+                
+            </div>
+       
+        </div>
+    </div>
+       
+</div>
+      <div style="border:3px solid red" data-ng-show="linkDetails.length==0">
+           <span> Please Wait for Link to play Tournament</span>
+        </div>
+
+    </div>-->

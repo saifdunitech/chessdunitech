@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="folder/Content/support.css" rel="stylesheet" />
+    <link href="folder/Content/responsive.css" rel="stylesheet" />
+    <link href="folder/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="folder/Content/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <script src="folder/Scripts/modernizr.min.js"></script>
+
+    <script src="folder/Scripts/bootstrap.min.js"></script>
+
+    <script src="folder/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="folder/Scripts/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="top_strip"></div>
+<header id="chess_header">
+<div class="container">
+    <div class="row"><div class="col-sm-5 after_this"><img src="Images/logo.png" alt="logo"></div>
+<div class="col-sm-5"><div class="txt_right right_menu">
+<a href="login.html" target="_blank" class="btn btn-default"><i class="fa fa-key"></i>Login</a>
+<a href="registration.html" class="btn btn-default"><i class="fa fa-file-o"></i>Register</a>
+<span class="points"><span class="points_box">12</span>Points</span>
+</div></div>
+<div class="col-sm-2"><nav class="menu" role="navigation">
+  <ul id="accordion" class="accordion">
+  <li>
+    <div class="link">Play<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><a href="#">Create a Game</a></li>
+      <li><a href="#">Tournament</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="link">Learn<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><a href="#">Basics</a></li>
+      <li><a href="#">Training</a></li>
+      <li><a href="#">Coordinates</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="link">Watch<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><a href="#">Current Games</a></li>
+      <li><a href="#">Video Library</a></li>
+      </ul>
+  </li>
+  <li>
+    <div class="link">Community<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><a href="#">Players</a></li>
+      <li><a href="#">Rating stats</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Forum</a></li>
+    </ul>
+  </li>
+  
+  <li>
+    <div class="link">Tools</div>
+    </li>
+     <li>
+    <div class="link">FAQs</div>
+    </li>
+    
+    <div class="link"><a href="login.html" target="_blank" class="btn btn-default btn-block"><i class="fa fa-key"></i>Login</a>
+<a href="registration.html" class="btn btn-default btn-block"><i class="fa fa-file-o"></i>Register</a></div>
+</ul>
+  </nav>
+      <a href="#" class="nav-toggle"><span class="fa fa-bars"></span></a></div>
+</div></div>
+</header>
+<section id="content_box">
+    
+    <div class="container">
+<div class="col-sm-7">
+<div class="left_block">
+<div class="movement_block"><div class="row">
+<div class="col-xs-9">
+<span class="to_move_piece"><img src="Images/piece_1_w.png" alt="piece"></span><span class="clr_brown noneed"><span class="txt_bold">White</span> to Move</span>
+<span class="ale_rt">Make Your Move</span>
+</div>
+<div class="col-xs-3"><div class="txt_right">
+<h3><span class="clock pull-left"><img src="Images/clock.gif" alt="clock"></span><span class="second_block">18s</span></h3></div></div>
+</div></div>
+
+<div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+            </div>
+
+<img src="Images/board.jpg" alt="chess-board" /></div>
+<div class="movement_block"><div class="row">
+<div class="col-xs-8">
+<span class="to_move_piece"><img src="Images/piece_1_b.png" alt="piece"></span><span class="clr_brown"><span class="txt_bold">Black</span> Ankit</span>
+</div>
+<div class="col-xs-4"><div class="txt_right"><span class="flip_icon"><a href="#"><img src="Images/flip_icon.png" alt="flip"></a></span></div></div>
+</div></div>
+</div>
+<div class="col-sm-5">
+    <div class="right_block">
+<div class="panel panel-warning">
+    <div class="panel-heading">
+    <h3 class="panel-title">Online Existing Table</h3>
+    </div>
+    <div class="panel-body scroll_this_cont"><div class="avail_tables_block"><ul>
+    <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Andrew</a></li>
+        <li><a href="#"><span class="de_active_table"></span>Ruskin</a></li>
+        <li><a href="#"><span class="de_active_table"></span>Anny</a></li>
+    <li><a href="#"><span class="de_active_table"></span>Kewin</a></li>
+    <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+          <li><a href="#"><span class="de_active_table"></span>Peterson</a></li>
+    </ul></div></div>
+</div>
+
+<div class="panel panel-warning">
+    <div class="panel-heading">
+    <h3 class="panel-title">Available Table To Join</h3>
+    </div>
+    <div class="panel-body scroll_this_cont">
+    <div class="avail_tables_block"><ul>
+    <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Andrew</a></li>
+        <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Ruskin</a></li>
+        <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Anny</a></li>
+    <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Kewin</a></li>
+    <li><span class="pull-right"><i class="fa fa-check"></i></span><a href="#"><span class="active_table"></span>Peterson</a></li>
+    </ul></div>
+    </div>
+</div>
+
+<div class="panel panel-warning">
+    <div class="panel-heading">
+    <h3 class="panel-title">History</h3>
+    </div>
+    <div class="panel-body scroll_this_cont">
+   
+    <div class="table-responsive history"><table class="table table-bordered">
+    <tbody>
+    <tr>
+    <td></td>
+    <td><div class="piecees"><img src="Images/piece_1_w.png" alt="piece"></div></td>
+    <td><div class="piecees"><img src="Images/piece_1_b.png" alt="piece"></div></td>
+    </tr>
+    
+    <tr>
+    <td>1</td>
+    <td>d2.d4</td>
+    <td>d7.d6</td>
+    </tr>
+    
+    </tbody>
+    </table></div>
+    </div>
+</div>
+
+<!--<a href="#" class="btn btn-default btn-block">Online Existing Table</a>
+<a href="#" class="btn btn-default btn-block">Available Table To Join</a>-->
+</div></div>
+</div></section>
+<section id="footer_main"><div class="container"><div class="row"><div class="col-sm-12"><p>Online Multiplayers Chess 2016</p></div></div></div></section>
+
+
+  
+
+<script> $(document).ready(function() {
+      $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+         }
+        )
+    });</script>
+    
+  <!--  scrollbar-->
+
+<script>
+		(function($){
+			$(window).on("load",function(){
+				$(".scroll_this_cont").mCustomScrollbar({
+					setHeight:120,
+					theme:"minimal-dark"
+				});
+		});
+		})(jQuery);
+	</script>
+
+   <script>
+// Vars
+
+var wrapper    = $("#site-wrapper"),
+    menu       = $(".menu"),
+    menuLinks  = $(".menu ul li a"),
+    toggle     = $(".nav-toggle"),
+    toggleIcon = $(".nav-toggle span");
+
+function toggleThatNav() {
+  if (menu.hasClass("show-nav")) {
+    if (!Modernizr.csstransforms) {
+      menu.removeClass("show-nav");
+      toggle.removeClass("show-nav");
+      menu.animate({
+        right: "-=300"
+      }, 500);
+      toggle.animate({
+        right: "-=300"
+      }, 500);
+    } else {
+      menu.removeClass("show-nav");
+      toggle.removeClass("show-nav");
+    }
+    
+  } else {
+    if (!Modernizr.csstransforms) {
+      menu.addClass("show-nav");
+      toggle.addClass("show-nav");
+      menu.css("right", "0px");
+      toggle.css("right", "330px");
+    } else {
+      menu.addClass("show-nav");
+      toggle.addClass("show-nav");
+    } 
+  }
+}
+
+function changeToggleClass() {
+  toggleIcon.toggleClass("fa-times");
+  toggleIcon.toggleClass("fa-bars");
+}
+
+$(function() {
+  toggle.on("click", function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    toggleThatNav();
+    changeToggleClass();
+  });
+    // Keyboard Esc event support
+  $(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+      if (menu.hasClass("show-nav")) {
+        if (!Modernizr.csstransforms) {
+          menu.removeClass("show-nav");
+          toggle.removeClass("show-nav");
+          menu.css("right", "-300px");
+          toggle.css("right", "30px");
+          changeToggleClass();
+        } else {
+          menu.removeClass("show-nav");
+          toggle.removeClass("show-nav");
+          changeToggleClass();
+        }
+      }
+    } 
+  });
+});
+</script>
+
+<script>
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<form id="loginform" data-ng-submit="login(player)" novalidate data-ng-init="init()">
+<div class="content left">
+        <div class="notice success icon bottom-16"><span class="utility check white"></span>You have successfully logged out.</div>    <h1 class="page-title no-padding">Login</h1>
+    <div id="c2"><div id="c6"></div> </div>        
+       
+            <ul class="form bottom-12">
+            <li>
+                <div class="fb" style="height: 25px;">
+                     <!--<fb app-id='154863778272129'></fb>-->
+               <a  class="button-facebook" href="" data-ng-click="loginWithFB()">
+                        Login with Facebook                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="bottom-24">
+            Or, login without using Facebook:
+        </div>
+        <ul class="form login">
+        <li><label for="c1">Username or Email:</label><input placeholder="Username or Email Id" data-ng-model="player.Username" type="text" name="c1" id="c1" value="" class="inputText" maxlength="60"> </li>
+        <li><label for="loginpassword">Password:</label><input placeholder="" type="password" data-ng-model="player.Password" name="loginpassword" id="loginpassword" value="" class="inputText reset-margin-bottom" maxlength="200">
+            <p class="instructions"><a href="/forgot">Forgot your password? Click here!</a></p> </li>
+        <li><span id="c3_ctl"></span> </li> <!-- is this used?? -->
+        <li><span id="c4_ctl"></span> </li> <!-- is this used?? -->
+        <li><label></label><div style="display:inline" id="rememberme_ctl"><input type="checkbox" id="rememberme" name="rememberme" class="checkbox"></div> <span class="checkbox-name grey">Remember me</span></li>
+        <li class="actions">
+            <button type="submit" name="btnLogin" id="btnLogin" class="button-submit xlarge">Login<span class="utility arrow-right white left-8"></span></button> <span id="c5" style="display:none;"><img src="https://cssjs.chesscomfiles.com/assets/images/spinner_14.gif" width="14" height="14" alt="Please Wait..."></span>         </li>
+    </ul>
+
+</div>
+
+    </form>
+
+
+
+
+ 
+      

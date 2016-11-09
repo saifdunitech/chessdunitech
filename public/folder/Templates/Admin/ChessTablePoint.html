@@ -1,0 +1,160 @@
+﻿<section id="admin_block">
+<div class="container"><div class="row">
+
+<div class="col-sm-12">
+
+<div class="cover_grey">
+ <button class="btn btn-info"  ng-click="loadEditForm()">Add Chess Table Point</button>
+
+<div class="tournament_block55" data-ng-init="init()">
+<!--<div data-ng-click="open();">Configure Chess Setup Table</div>-->
+      
+
+
+
+<div class="table-responsive adm_cl">
+
+<table ng-table="tableParams" class="table table-bordered">
+
+<tr data-ng-show="$data.length!=0" ng-repeat="t in $data">
+
+<td data-title="'Pawn'"> {{t.pawn}}</td>
+
+<td data-title="'Knight'">{{t.knight}}</td>
+
+<td data-title="'Bishop'">{{t.bishop}}</td>
+    <td data-title="'Rook'">{{t.rook}}</td>
+    <td data-title="'Queen'">{{t.queen}}</td>
+    <td data-title="'Winning Points'">{{t.winningPoints}}</td>
+
+
+    <td data-title="'Is Default'">{{t.IsDefault}}</td>
+   <!-- <td data-title="'Is Deleted'">{{table.IsDeleted}}</td>-->
+    <td data-title="'Edit'" data-ng-click="editsetup(t);">Edit
+    </td>
+      <td data-title="'Delete'"data-ng-click="deletesetup(t);">Delete</td>
+      
+</tr>
+
+      <tr data-ng-show="$data.length==0" >
+        <td >
+            No data.                
+        </td>
+    </tr>
+</table>
+    </div>
+    </div></div></div>
+</div></div>
+
+    </section>
+
+
+    <script>
+        (function ($) {
+            $(window).on("load", function () {
+                $(".tournament_block55").mCustomScrollbar({
+                    setHeight: 450,
+                    theme: "minimal-dark"
+                });
+            });
+        })(jQuery);
+	</script>
+    <script>
+        // Vars
+
+        var wrapper = $("#site-wrapper"),
+            menu = $(".menu"),
+            menuLinks = $(".menu ul li a"),
+            toggle = $(".nav-toggle"),
+            toggleIcon = $(".nav-toggle span");
+
+        function toggleThatNav() {
+            if (menu.hasClass("show-nav")) {
+                if (!Modernizr.csstransforms) {
+                    menu.removeClass("show-nav");
+                    toggle.removeClass("show-nav");
+                    menu.animate({
+                        left: "-=300"
+                    }, 500);
+                    toggle.animate({
+                        left: "-=300"
+                    }, 500);
+                } else {
+                    menu.removeClass("show-nav");
+                    toggle.removeClass("show-nav");
+                }
+
+            } else {
+                if (!Modernizr.csstransforms) {
+                    menu.addClass("show-nav");
+                    toggle.addClass("show-nav");
+                    menu.css("left", "0px");
+                    toggle.css("left", "330px");
+                } else {
+                    menu.addClass("show-nav");
+                    toggle.addClass("show-nav");
+                }
+            }
+        }
+
+        function changeToggleClass() {
+            toggleIcon.toggleClass("fa-times");
+            toggleIcon.toggleClass("fa-bars");
+        }
+
+        $(function () {
+            toggle.on("click", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                toggleThatNav();
+                changeToggleClass();
+            });
+            // Keyboard Esc event support
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27) {
+                    if (menu.hasClass("show-nav")) {
+                        if (!Modernizr.csstransforms) {
+                            menu.removeClass("show-nav");
+                            toggle.removeClass("show-nav");
+                            menu.css("left", "-300px");
+                            toggle.css("left", "30px");
+                            changeToggleClass();
+                        } else {
+                            menu.removeClass("show-nav");
+                            toggle.removeClass("show-nav");
+                            changeToggleClass();
+                        }
+                    }
+                }
+            });
+        });
+</script>
+
+<script>
+    $(function () {
+        var Accordion = function (el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.link');
+            // Evento
+            links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
+        }
+
+        Accordion.prototype.dropdown = function (e) {
+            var $el = e.data.el;
+            $this = $(this),
+			$next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        var accordion = new Accordion($('#accordion'), false);
+    });
+</script>

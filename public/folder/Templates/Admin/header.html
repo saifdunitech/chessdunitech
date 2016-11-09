@@ -1,0 +1,56 @@
+﻿<!--<header>
+            <div class="content-wrapper">
+                <div class="float-left">                   
+                </div>
+                <div class="float-right">
+              {{currentUser}}
+                    <nav>
+                        <ul id="menu">
+
+                               <li><a data-ui-sref="AdminLogin">Admin</a></li>
+                              <li><a data-ui-sref="chessPoint">Point Based Chess Setup</a></li>
+                                <li><a data-ui-sref="TournamentSetup">Tournament Setup</a></li>
+                              <li><a data-ui-sref="allTournament">All Tournament</a></li>
+                            <li><a data-ui-sref="SetupTable">Time Based Chess Setup</a></li>
+                  
+    </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>-->
+
+
+<header id="chess_header">
+<div class="container"><div class="row"><div class="col-sm-3 after_this"><img src="Images/logo.png" alt="logo"></div>
+<div class="col-sm-9"><div class="txt_right right_menu">
+             {{currentUser}}
+</div></div>
+</div></div>
+</header>
+<section id="admin_menu_block"><div class="container">
+<div class="row"><div class="col-sm-12"><nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+               </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+     <!--           <li><a data-ui-sref="AdminLogin">Admin</a></li>-->
+                              <li><a data-ui-sref="chessPoint">Point Based Chess Setup</a></li>
+                                <li><a data-ui-sref="TournamentSetup">Tournament Setup</a></li>
+                              <li><a data-ui-sref="allTournament">All Tournament</a></li>
+                            <li><a data-ui-sref="SetupTable">Time Based Chess Setup</a></li>
+                <li>
+                    <a  data-ui-sref="Logout">Logout
+                        </a>
+                </li>
+              </ul>
+        
+        </div>
+    </nav></div></div>
+</div></section>

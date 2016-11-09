@@ -1,0 +1,59 @@
+﻿
+
+<div data-ng-init="init()">
+
+<!--<div data-ng-click="open();">Configure Chess Setup Table</div>-->
+
+<!--  <table>
+      <tr>
+          <td><label>User Id</label></td>
+          <td>{{table.UserId}}</td>
+      </tr>
+          <tr>
+          <td><label>Total Time Limit (Min.)</label></td>
+          <td><input type="text" data-ng-model="table.TotalTimeLimit" /></td>
+      </tr>
+          <tr>
+          <td><label>Total Time Per Move Limit(Min.)</label></td>
+          <td><input type="text" data-ng-model="table.TotalTimePerMoveLimit" /></td>
+      </tr>
+          <tr>
+          <td><label>Is Default</label></td>
+          <td><input type="checkbox" data-ng-model="table.IsDefault" /></td>
+      </tr>
+      <tr>
+          <td>
+              <button data-ng-show="!isEdit" data-ng-click="saveSetup(table,1);">Save</button>
+               <button data-ng-show="isEdit" data-ng-click="saveSetup(table,2);">Update</button>
+          </td>
+      </tr>
+  </table>-->
+
+      <button class="btn btn-info"  ng-click="open()">Add Table Time</button>
+
+<table ng-table="tableParams" class="table table-striped" >
+
+<tr data-ng-show="$data.length!=0" ng-repeat="t in $data">
+
+<td data-title="'Username'" >{{t.Username}}</td>
+
+<td data-title="'Total Time Limit (Min.)'">{{t.TotalTimeLimit}}</td>
+
+<td data-title="'Total Time Per Move Limit (Min.)'">{{t.TotalTimePerMoveLimit}}</td>
+    <td data-title="'Is Default'">{{t.IsDefault}}</td>
+        <td data-title="'Winning Type'">{{t.WinningMethod}}</td>
+   <!-- <td data-title="'Is Deleted'">{{table.IsDeleted}}</td>-->
+    <td data-title="'Edit'" data-ng-click="editsetup(t);">Edit
+  
+    </td>
+      <td data-title="'Delete'" data-ng-click="deletesetup(t);">Delete</td>
+      
+</tr>
+
+      <tr data-ng-show="tableDetails.length==0" >
+        <td >
+            No data.                
+        </td>
+    </tr>
+</table>
+    </div>

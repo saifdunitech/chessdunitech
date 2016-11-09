@@ -1,0 +1,179 @@
+﻿<!--<header>
+            <div class="content-wrapper">
+                <div class="float-left">                   
+                </div>
+                <div class="float-right">
+              {{currentUser}}
+                    <nav>
+                        <ul id="menu">
+                             	<li><a data-ui-sref="Lobby"><img src="../../img/chesspieces/wikipedia/bB.png" style="height:30px;" alt="Chess Lobby"> Create Chess Table</a></li>
+					<li><a data-ui-sref="ChessBoard"><img src="Images/chess_icon.png" style="height:30px;" alt="Play Chess (same browser)"> Play Chess (same browser)</a></li>					
+      <li><a data-ui-sref="Login">Login to Play Chess</a></li>
+        <li><a data-ui-sref="Register">Register</a></li>
+        <li><a data-ui-sref="GetPlayer">GetPlayer</a></li>
+                               <li><a data-ui-sref="SetupTable">Setup Chess Table</a></li>
+                               <li><a data-ui-sref="AdminLogin">Admin Login</a></li>
+                  
+    </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>-->
+
+<header id="chess_header">
+<div class="container">
+    <div class="row">
+   
+        <div class="col-sm-5 after_this">
+          
+            <img src="Images/logo.png" alt="logo"></div>
+<div class="col-sm-5"><div class="txt_right right_menu">
+
+<span class="points"><span class="points_box">12</span>Points</span>
+ <span>       You are :   {{currentUser}}</span>
+</div></div>
+<div class="col-sm-2">
+
+<nav class="menu" role="navigation">
+  <ul id="accordion" class="accordion">
+  <li>
+    <div class="link">Play<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+	<li><a data-ui-sref="Lobby"><img src="../../img/chesspieces/wikipedia/bB.png" style="height:30px;" alt="Chess Lobby"> Create Chess Table</a></li>
+					<li><a data-ui-sref="ChessBoard"><img src="Images/chess_icon.png" style="height:30px;" alt="Play Chess (same browser)"> Play Chess (same browser)</a></li>					
+       <li><a data-ui-sref="GetPlayer">GetPlayer</a></li>
+           <li><a data-ui-sref="SetupUserTable">Setup Chess Table</a></li>
+<!--        <li><a data-ui-sref="AdminLogin">Admin Login</a></li>-->
+           <li><a data-ui-sref="chessUserPoint">Setup Chess Point</a></li>
+          <li><a data-ui-sref="tournamentList">Tournament List</a></li>
+          <li><a data-ui-sref="myTournamentMatches">my Tournament Matches</a></li>
+    </ul>
+  </li>
+  <li>
+
+    
+
+</ul>
+        <div class="link btn btn-default btn-block" data-ui-sref="Login"><i class="fa fa-key">Login</i>
+        </div>
+          <div class=" btn btn-default btn-block" data-ui-sref="Logout"><i class="fa fa-key">Logout</i>
+        </div>
+  </nav>
+      <a href="#" class="nav-toggle"><span class="fa fa-bars"></span></a>
+
+    </div>
+        </div>
+    </div>
+    </header>
+
+<script> $(document).ready(function () {
+     $('.progress .progress-bar').css("width",
+               function () {
+                   return $(this).attr("aria-valuenow") + "%";
+               }
+       )
+ });</script>
+    
+  <!--  scrollbar-->
+
+
+
+   <script>
+       // Vars
+
+       var wrapper = $("#site-wrapper"),
+           menu = $(".menu"),
+           menuLinks = $(".menu ul li a"),
+           toggle = $(".nav-toggle"),
+           toggleIcon = $(".nav-toggle span");
+
+       function toggleThatNav() {
+           if (menu.hasClass("show-nav")) {
+               if (!Modernizr.csstransforms) {
+                   menu.removeClass("show-nav");
+                   toggle.removeClass("show-nav");
+                   menu.animate({
+                       right: "-=300"
+                   }, 500);
+                   toggle.animate({
+                       right: "-=300"
+                   }, 500);
+               } else {
+                   menu.removeClass("show-nav");
+                   toggle.removeClass("show-nav");
+               }
+
+           } else {
+               if (!Modernizr.csstransforms) {
+                   menu.addClass("show-nav");
+                   toggle.addClass("show-nav");
+                   menu.css("right", "0px");
+                   toggle.css("right", "330px");
+               } else {
+                   menu.addClass("show-nav");
+                   toggle.addClass("show-nav");
+               }
+           }
+       }
+
+       function changeToggleClass() {
+           toggleIcon.toggleClass("fa-times");
+           toggleIcon.toggleClass("fa-bars");
+       }
+
+       $(function () {
+           toggle.on("click", function (e) {
+               e.stopPropagation();
+               e.preventDefault();
+               toggleThatNav();
+               changeToggleClass();
+           });
+           // Keyboard Esc event support
+           $(document).keyup(function (e) {
+               if (e.keyCode == 27) {
+                   if (menu.hasClass("show-nav")) {
+                       if (!Modernizr.csstransforms) {
+                           menu.removeClass("show-nav");
+                           toggle.removeClass("show-nav");
+                           menu.css("right", "-300px");
+                           toggle.css("right", "30px");
+                           changeToggleClass();
+                       } else {
+                           menu.removeClass("show-nav");
+                           toggle.removeClass("show-nav");
+                           changeToggleClass();
+                       }
+                   }
+               }
+           });
+       });
+</script>
+
+<script>
+    $(function () {
+        var Accordion = function (el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.link');
+            // Evento
+            links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
+        }
+
+        Accordion.prototype.dropdown = function (e) {
+            var $el = e.data.el;
+            $this = $(this),
+			$next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        var accordion = new Accordion($('#accordion'), false);
+    });
+</script>

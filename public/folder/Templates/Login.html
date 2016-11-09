@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+    <title>Chess</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
+    <link href="folder/Content/support.css" rel="stylesheet" />
+    <link href="folder/Content/responsive.css" rel="stylesheet" />
+    <link href="folder/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+       <script src="folder/Scripts/toaster.js"></script>
+          <script src="folder/Scripts/underscore.js"></script>
+          <script src="folder/Scripts/angular-cookies.js"></script>  
+            <script src="folder/Scripts/MyScript/Modules.js"></script>
+      <script src="folder/Scripts/MyScript/Controllers.js"></script>
+      <script src="folder/Scripts/MyScript/Services.js"></script>
+      <script src="folder/Scripts/MyScript/Directive.js"></script>
+          <link href="folder/Content/toaster.css" rel="stylesheet" />
+      <link href="folder/Content/Site.css" rel="stylesheet" />
+      <link href="folder/Content/style.css" rel="stylesheet" />
+     <link href="folder/Content/onlinechessgame.css" rel="stylesheet" />
+      <link href="folder/Content/ng-table.min.css" rel="stylesheet" />
+      <link href="folder/Content/bootstrap.min.css" rel="stylesheet" />
+         <script src="folder/Scripts/bootstrap.min.js"></script>
+
+
+      <script src="folder/Scripts/jquery.min.js"></script>
+  </head>
+
+<body>
+    <form id="loginform" data-ng-submit="login(player)" novalidate data-ng-init="init()">
+<section id="login_bg">
+<div class="trans_layer">
+<div class="login_box_cover"><div align="center"><img src="Images/logo_white.png" alt="logo"></div>
+<div class="container">
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8"><div class="cover_main"><h2>Login here</h2>
+<hr>
+
+    <div class="input-group margin-bottom-sm">
+  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+  <input class="form-control" type="text"  data-ng-model="player.Username" placeholder="Email address or Username">
+</div>
+
+
+
+
+    <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+  <input class="form-control"  data-ng-model="player.Password" type="password" placeholder="Password">
+</div>
+
+<div class="form-group"><div class="row">
+<div class="col-sm-6"><p><button type="submit" class="btn btn-warning">SIGN IN</button><a href="#">Forgot Password?</a></p> </div>
+    
+<div class="col-sm-6">
+    <div class="txt_right">
+       
+
+    </div></div>
+</div></div>
+<hr>
+<p>Have not account yet? Register <a data-ui-sref="Register">here</a></p>
+        <div class="fb" style="height: 25px;">
+                     <!--<fb app-id='154863778272129'></fb>-->
+               <a  class="button-facebook" href="" data-ng-click="loginWithFB()">
+                        Login with Facebook                    </a>
+                </div>
+</div></div>
+<div class="col-sm-2"></div>
+</div></div></div>
+</div></section>
+
+
+        </form>
+</body>
+</html>

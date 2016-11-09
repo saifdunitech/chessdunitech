@@ -1,0 +1,131 @@
+﻿/* Page styles */
+#page {
+	width: 960px;
+	margin: 0 auto;
+	border: 1px solid #666;
+	background-color: #fff;
+}
+
+#pageborder {
+	width: 983px;
+	margin: 0 auto;
+	background-image: url(../img/rap.jpg);
+	background-repeat: repeat-y;
+}
+
+#container {
+	margin: 10px 10px 10px 10px;
+}
+
+#header {
+	padding: 0px;
+	height: 150px;
+	position: relative;
+	background: white url(../img/games_header.jpg) no-repeat top center;
+}
+
+/* Link styles */
+a, a:link, a:visited {
+  color: #3C4391;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #3C4391;
+  text-decoration: underline;
+}
+
+a:active, a.active { 
+  color: #89A3E4; 
+}
+		
+h1.title, h1.title a, h1.title a:hover {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #555;
+  font-size: 175%;
+  margin:0;
+  margin-bottom:0px;
+  line-height:normal;
+}
+
+h1, h1 a, h1 a:hover {
+  font-size: 140%;
+  color: #444;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin:.5em 0 .5em 0;
+}
+
+h2, h2 a, h2 a:hover, .block h3, .block h3 a {
+  font-size: 122%;
+  color: #444;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin:0 0 0 0;
+}
+
+h3 { 
+  font-size: 107%;
+  font-weight: bold; 
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin:0 0 0 0;
+}
+
+h4, h5, h6 {
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin:0 0 0 0;
+}
+
+.h2Equivalent {
+	font-size: 122%;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Global styles */
+html {
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+body {
+	margin: auto;
+	padding: 0;
+	background-color: #F0F5F5;
+	font-size: .8em;
+	font-family: Verdana, Arial, Sans-Serif;
+}
+
+img {
+	border: 0;
+}
+
+/* Footer styles */
+#footer-wrapper {
+	clear: both;
+	margin: 0;
+	margin-top: 15px;
+}
+
+#footer {
+	background-color: #FFF;
+	text-align: center;
+	margin: 0;
+	font-size: .8em;
+	padding: 0px;
+}
+
+#footer a {
+	color: #3C4391;
+	font-weight: bold;
+}
+
+#footer a:hover {
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.ui-state-disabled {
+    opacity: .8;
+    filter:Alpha(Opacity=80);
+    background-image: inherit;
+}

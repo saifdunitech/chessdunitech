@@ -1,0 +1,184 @@
+﻿@charset "utf-8";
+/* CSS Document */
+@import url('hamberger_menu.css');
+/*login page css*/
+#login_bg{ position:fixed; background:url(../../Images/login_bg.jpg)no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; left:0; right:0; top:0; bottom:0 }
+  .trans_layer{ background:rgba(25,15,9,0.5); position:absolute; z-index:999; height:100%; top:0; width:100%; left:0; right:0; bottom:0}
+  .login_box_cover{ z-index:999999; margin-top:3%;}
+  .cover_main{ background:#fff; background:#fff; padding:20px 30px;-webkit-border-radius:22px;-moz-border-radius:22px;-o-border-radius:22px;border-radius:22px; margin-top:20px;-webkit-box-shadow:0 5px 10px 10px rgba(0,0,0,0.6);
+box-shadow: 0 5px 10px 10px rgba(0,0,0,0.6);}
+  
+ .login_box_cover  .form-control {
+  display: block;
+  width: 100%;
+  height:45px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #999;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+  border-color: #ccc;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(74, 70, 59, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(74, 70, 59, .6);
+}
+  
+
+*{ margin:0; padding:0}
+ul li{ list-style:none}
+img{ max-width:100%; height:auto}
+.top_strip{ background:url(../../Images/top_bg.jpg) repeat; height:7px}
+#chess_header{background:#efd3a6; padding:10px 0px;}
+#chess_header .btn{padding:3px 8px;}
+#content_box{ padding:9px 0px 50px;}
+.left_block{}
+.movement_block{ padding:10px 20px 5px; background:#d4cab9}
+.movement_block span{/* margin-right:10px*/}
+.movement_block h3{ margin-top:2px; color:#381e13; font-size:16px; line-height:2.2em;}
+.clr_brown{color:#381e13}
+.movement_block .to_move_piece img{ height:30px; margin-right:10px}
+.ale_rt{ background:#ab6240; padding:5px 8px; font-size:12px; font-weight:bold; color:#fff; margin-left:10px}
+.right_block{background:#fee6bc; padding:6px;}
+.left_block{background:#fee6bc; padding:6px;}
+.right_block .panel:last-child{ margin-bottom:0}
+.clock img{ width:36px; height:36px; border-radius:50%}
+.avail_tables_block ul li .fa{ color:#b8b8b8;margin-right:10px;}
+.avail_tables_block ul li{ color:#888; display:block; line-height:1.6em;}
+.avail_tables_block ul li a{padding:5px 10px 5px; display:block;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;-transition:all 0.5s ease;}
+.avail_tables_block ul li a:hover{ background:#e7e7e7;display:block; color:#555;}
+.hist_icons_block{ margin:5px 0px}
+.hist_icons_block img{ height:25px; margin-top:10px;}
+.active_table{width:10px; height:10px; display:inline-block; background:#6fb753; margin-right:8px; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;}
+.de_active_table
+{ width:10px; height:10px; display:inline-block; background:#bcbcbc;margin-right:8px; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;}
+/*.right_block .panel-body{ height:100px}*/
+.txt_right{ text-align:right}
+.right_block .panel .panel-heading h3, .panel .panel-heading h3{ color:#210f09; line-height:.2em; margin-top:5px; margin-bottom:4px;}
+.board_cover img{ width:100%}
+.right_block .panel .panel-body{ padding:6px;}
+.txt_right .second_block{display:inline-block; width:36px; height:36px; border-radius:50%; background:#efd6b0; text-align:center;-webkit-box-shadow:0px 0px 4px #422718; -o-box-shadow:0px 0px 4px #422718; box-shadow:0px 0px 4px #422718}
+.txt_bold{ font-weight:900}
+.right_menu{ margin-top:6px; margin-right:-10px}
+.right_menu .btn{ margin-left:5px; color:#960}
+.right_menu .btn:hover{ color:#4d2507}
+.right_menu .btn i{ margin-right:6px}
+.left_block .progress-bar, .left_block .progress{border-radius:0; margin-bottom:0; height:10px;}
+.flip_icon img{ width:36px; height:36px;-webkit-box-shadow:0px 0px 4px #422718; -o-box-shadow:0px 0px 4px #422718; box-shadow:0px 0px 4px #422718;border-radius:50%;}
+.history .piecees{ text-align:center}
+.history .piecees img{ height:40px}
+.flip_icon img:hover{ opacity:0.6;}
+.points_box{ width:45px;height:25px; margin-right:6px; position:relative;top:2px;background:#fff;color:#555; padding-top:3px; text-align:center;display:inline-block;}
+.points{ color:#2f140a}
+/*progressbar*/
+.progress-bar {
+  text-align: left;
+  transition-duration: 5s;
+}
+.hist_block{ text-align:center}
+.history_left_block{ border-right:1px solid #ddd}
+
+ /*tournament css start*/
+ .tourna_ment_block{ height:550px; background:#eee; padding:40px 15px 20px}
+ #tourna_ment_section{ background:url(../../Images/login_bg.jpg) no-repeat 50% 50%;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;}
+ .tournament_cover{ margin-bottom:25px; background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 54%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(54%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 54%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 54%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 54%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 54%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 ); border:1px solid #d8d8d8;border-radius:6px; padding:10px 15px 15px;}
+  .tournament_cover p{ margin-bottom:3px}
+  .tournament_cover h4{ color:#fff; font-style:italic; background:#da562d; border-top:1px solid #faa990; display:inline-block; margin-left:-15px; padding:5px 8px;}
+  .tournament_cover p{ color:#361908}
+  .dategreen{ color:#339801}
+  .datered{ color:#ff0c00}
+   .tournament_cover .btn-warning{ margin-top:10px; border-color: #960; color:#340a08; font-size:15px; font-weight:600;background: #f3e2c7;
+background:-moz-linear-gradient(top, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+background:-webkit-linear-gradient(top, #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%);
+background:linear-gradient(to bottom, #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 );}
+ .tournament_cover .btn-warning:hover{ color:#F60; border-color:#960}
+ .tournament_block55{ padding-right:15px;}
+ .hist_value_block{ padding:5px; background:#eee; margin-bottom:4px;}
+  /*tournament css closed*/
+  
+ /* admin css start*/
+ #admin_menu_block{height:40px; background:#722600;}
+ #admin_block{ padding:30px 0px}
+ .cover_grey{ background:#eee; padding:15px;}
+  #admin_block .adm_cl table thead{ background:#C60; color:#fff}
+  #admin_block .adm_cl table{ background:#fff}
+  .white_block{ background:#fff; padding:15px; margin-bottom:20px}
+  
+  .need_padding{ padding-bottom:120px;}
+   .white_block2{ position:fixed; right:0; left:0; bottom:15px; background:#722600; text-align:center; padding:15px 0px; margin-bottom:20px}
+      .white_block2 h4{ color:#cc6600}
+	  .white_block2 h2{ color:#fff; margin-top:10px; margin-bottom:10px;}
+	  .player_status_box{ background:#fff; border:1px solid #ddd; padding:15px; margin-top:10px; margin-bottom:10px}
+	  .player_status_box ul li{ font-size:15px; color:#555; line-height:1.5em; padding:5px 12px; cursor:pointer; margin-bottom:4px; background:#f6f6f6}
+	  .circle_green{ position:relative; top:8px; display:inline-block; width:8px; height:8px; background:#093;-webkit-border-radius:50%; border-radius:50%;}
+	  .circle_grey{ position:relative; top:8px; display:inline-block; width:8px; height:8px; background:#b4b4b4;-webkit-border-radius:50%; border-radius:50%;}
+/*  admin css closed*/
+
+#footer_main{ background:#eee;position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  padding:8px 0px 5px;
+  text-align: center;}
+  #footer_main p{ margin-bottom:0; font-size:11px; font-weight:bold; text-align:center; color:#888; margin-bottom:6px}
+  
+   @media(min-width:993px) and (max-width:1199px)
+   {
+	  .right_block .panel .panel-heading h3, .panel .panel-heading h3{ font-size:12px; font-weight:bold; color:#210f09;line-height:.2em; margin-top:5px; margin-bottom:4px;}
+ 
+	   }
+  
+   @media(min-width:768px) and (max-width:992px)
+   {
+	  .right_block .panel .panel-heading h3, .panel .panel-heading h3{ font-size:9px; font-weight:bold; color:#210f09;line-height:.2em; margin-top:5px; margin-bottom:4px;}
+ 
+	   }
+	   
+	   
+ 
+  
+  @media(max-width:550px)
+  {
+	  .ale_rt{ background:#ab6240; padding:5px 3px; font-size:11px; font-weight:bold; color:#fff; margin-left:5px}
+	  .movement_block .clr_brown{ font-size:12px;}
+	  .movement_block .to_move_piece img{ height:26px; margin-right:5px}
+	  #content_box{ padding:70px 0px 50px; }
+	  .right_menu{ display:none}
+	  #chess_header{background:#efd3a6;z-index:999999; position:fixed; width:100%; top:0; right:0; left:0}
+	  #chess_header .btn{ padding:3px 5px; font-size:12px;}
+	   #chess_header .txt_right{ text-align:center}
+	   .clock{ display:none}
+	  /* .clock img{ width:30px; height:30px; border-radius:50%}*/
+.txt_right .second_block{display:inline-block; width:36px; height:36px; border-radius:50%; background:#efd6b0; text-align:center;-webkit-box-shadow:0px 0px 4px #422718; -o-box-shadow:0px 0px 4px #422718; box-shadow:0px 0px 4px #422718}
+	  .right_block{ margin-top:20px; background:#fee6bc; padding:10px; margin-left:0px;}
+	  .flip_icon img{ width:26px; height:26px;-webkit-box-shadow:none	;border-radius:50%;}
+	  .after_this img{ height:40px}
+	  .movement_block h3{ width:100%; padding:10 2px;}
+	  }
+	  
+	  @media(max-width:396px)
+	  {
+		  .noneed{ display:none}
+		  .after_this img{ height:30px}
+		  }
+

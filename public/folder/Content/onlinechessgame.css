@@ -1,0 +1,77 @@
+﻿body {
+}
+
+
+.form > li > .fb > a {
+    text-decoration: none;
+    /* background-color: blueviolet; */
+    color: white;
+    border-radius: 3px;
+    /* background-image: url("/images/fb_logo1.png"); */
+    /* position: relative; */
+}
+
+.form > li {
+    display: block;
+}
+
+.button-facebook {
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -khtml-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    zoom: 1;
+    margin: 0 6px 0 0;
+    color: #ffffff;
+    font-weight: normal;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px 14px;
+    background-color: #3b5b99;
+    background-image: url("/images/fb_logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    padding: 4px 2px 0px 25px !important;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    background-image: -webkit-gradient(linear,0% 0%,0% 200%,from(#3b5b99),to(#325971));
+    background-image: -moz-linear-gradient(0% 200% 90deg,#325971,#3b5b99);
+    background-color: #3b5b99;
+    border: 1px solid #3b5b99;
+    -webkit-box-shadow: inset 1px 1px 0px #6e84b1;
+    -moz-box-shadow: inset 1px 1px 0px #6e84b1;
+    box-shadow: inset 1px 1px 0px #6e84b1;
+    behavior: url(/css/PIE.htc);
+    background-image: url("/Images/fb_logo.png");
+    background-size: 25px 20px;
+}
+
+.loadingImage {
+    background-image: url("/Images/loading.gif");
+}
+
+.in-check {
+    background: radial-gradient(ellipse at center,rgba(255,0,0,1) 0%,
+    rgba(231,0,0,1) 25%,
+    rgba(169,0,0,0) 89%,
+    rgba(158,0,0,0) 100%);
+}
+
+.white-1e1d7 {
+  background-color: #d5f8d7;
+  color: #5a3336;
+}
+/* black square */
+.black-3c85d {
+  background-color: #287d37;
+  color: #f2f4f1;
+
+}
+

@@ -1,0 +1,17 @@
+﻿
+<div style="border:solid red 3px" data-ng-init="init();">
+    <h1>Chess Table</h1>
+    <input type="text" data-ng-model="roomName" required />
+    <input type="button" name="CreateRoom" value="Create Chess Table"  data-ng-click="createRoom();"   />
+
+    <ul data-ng-repeat="r in rooms track by $index">
+        <li>
+    <span>      <!--   <span  data-ng-click="joinRoom(r);" > -->{{r.roomName}} 
+                <b data-ng-show="!r.isAvaiable">Is not Avaiable to Join</b>
+                <b data-ng-show="r.isAvaiable">Avaiable to Join, Created By ( {{r.Username}} )</b>
+                <button class="fa fa-default" data-ng-click="sendEmail(r)">Email Link to your friend to play</button>
+            </span>
+        </li>
+    </ul>
+
+ </div>

@@ -1,0 +1,80 @@
+﻿<!doctype >
+<html data-ng-app="App">
+  <head>
+    <title>Chess</title> 
+      <script src="folder/Scripts/angular.js"></script>
+      <script src="folder/Scripts/angular-ui-router.js"></script>
+      <script src="folder/Scripts/angular-animate.js"></script>
+      <script src="folder/Scripts/angular-messages.js"></script>
+      <script src="folder/Scripts/toaster.js"></script>
+      <script src="folder/Scripts/underscore.js"></script>
+      <script src="folder/Scripts/ng-table.js"></script>
+    <script src="folder/jquery-1.8.2.js"></script>    
+    <script src="folder/chess.js"></script> 
+    <script src="folder/chessboard-0.3.0.js"></script> 
+
+<!--<script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>-->
+<!--      <script src="folder/Chessboard/socket.io-1.0.0.js"></script>-->
+    <!--  <script src="folder/Chessboard/socket.io.js"></script>-->
+       <script src="https://cdn.socket.io/socket.io-1.0.6.js"></script>
+             <script src="folder/Scripts/MyScript/Modules.js"></script>
+      <script src="folder/Scripts/MyScript/Controllers.js"></script>
+      <script src="folder/Scripts/MyScript/Services.js"></script>
+   <link rel="stylesheet" type="text/css" href="chessboard-0.3.0.css"/>
+      <link href="folder/Content/toaster.css" rel="stylesheet" />
+      <link href="folder/Content/Site.css" rel="stylesheet" />
+      <link href="folder/Content/style.css" rel="stylesheet" />
+      <link href="folder/Content/onlinechessgame.css" rel="stylesheet" />
+      <link href="folder/Content/ng-table.min.css" rel="stylesheet" />
+     
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">                   
+                </div>
+                <div class="float-right">
+              
+                    <nav>
+                        <ul id="menu">                              
+					<li><a data-ui-sref="Lobby"><img src="Images/chess_icon.png" alt="Chess Lobby"> Chess Lobby</a></li>
+					<li><a data-ui-sref="ChessBoard"><img src="Images/chess_icon.png" alt="Play Chess (same browser)"> Play Chess (same browser)</a></li>					
+      <li><a data-ui-sref="LogOut">Log Out</a></li>
+
+        <li><a data-ui-sref="GetPlayer">GetPlayer</a></li>
+                             <li><a data-ui-sref="Play">Play</a></li>
+                               <li><a data-ui-sref="Index">Index</a></li>
+    </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">  
+<div ui-view></div>
+    
+            <section class="content-wrapper main-content clear-fix">           
+<!--              <toaster-container toaster-options="{'time-out': 3000,'spinner':false}"></toaster-container>-->
+                <toaster-container toaster-options="{
+  'closeButton': false,
+  'debug': false,
+  'positionClass': 'toast-top-right',
+  'onclick': null,
+  'showDuration': '200',
+  'hideDuration': '1000',
+  'timeOut': '5000',
+  'extendedTimeOut': '1000',
+  'showEasing': 'swing',
+  'hideEasing': 'linear',
+  'showMethod': 'fadeIn',
+  'hideMethod': 'fadeOut'
+}"></toaster-container>
+         <!--     <div  id="loadimage" >
+                    <img class="loadingImage" src="~/Images/loading.gif">
+
+                    </img>
+                </div>-->
+            </section>
+        </div>
+ 
+    </body>
+</html>

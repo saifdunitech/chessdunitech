@@ -1,0 +1,235 @@
+﻿<!--<div class="col-sm-12" data-ng-init="init()" >
+        All Listed Tournament
+<div style="border:3px solid blue" >
+    <div class="row">
+        <div class="col-sm-12">
+        
+            <div>
+              Tournament Name  {{t.TournamentName}}
+                <br />
+              You have Already Joined  Status :  {{t.isAlreadyJoin}}
+                
+            </div>
+
+                        
+        </div>
+    </div>
+</div>
+    </div>-->
+
+
+<section id="admin_block" data-ng-init="init()" >
+<div class="container">
+    <div class="row">
+
+<div class="col-sm-12">
+
+<div class="cover_grey">
+<div class="tournament_block55">
+<div class="table-responsive adm_cl"><table class="table table-bordered">
+<thead>
+<tr>
+<th>Tournament Name</th>
+<th>Start Date</th>
+    <th>Start Time</th>
+<th>End Date</th>
+<th>End Time</th>
+    <th>No Of Players / Avaiable Players</th>
+<th>View</th>
+</tr>
+</thead>
+<tbody data-ng-repeat="t in tournament">
+<tr>
+    <td> {{t.TournamentName}}</td>
+<td>{{ ToWcfDate(t.T_StartDate) | date:'dd-MMM-yyyy'}}</td>
+    <td>{{ToWcfDate(t.T_StartTime) | date:'hh:mm a'}}</td>
+<td>{{ToWcfDate(t.T_EndDate) | date:'dd-MMM-yyyy'}}</td>
+        <td>{{ToWcfDate(t.T_EndTime) | date:'hh:mm a'}}</td>
+    <td>( {{t.NoOfPlayers}} / {{t.noOfAvaiablePlayers}} )</td>
+<td><button class="btn btn-default" data-ng-click="viewAllPlayers(t);">Send Link to Players</button></td>
+</tr>
+
+
+</tbody>
+</table></div>
+
+    <fieldset data-ng-if="allTournamentPlayers.length>0"> 
+        <legend>{{TournamentName}}</legend>
+<h4>Current Round</h4>
+<div class="white_block"><div class="table-responsive adm_cl">
+    <table class="table table-bordered" data-ng-if="!isWinner" >
+<tbody>
+<tr>
+<td width="20%"><h5 class="txt_bold"> Round : ( {{tournamentRound}} )</h5></td>
+<td width="40%"><div>   <span>                 
+                    <input ng-disabled="names.length==0 " auto-complete ui-items="names" ng-model="linkUserId" />
+                   {{linkUserId}}
+
+               </span>
+          
+                <span>
+                     Checked : White,   UnChecked : Black
+                    <input type="checkbox" ng-disabled="names.length==0 "  ng-model="UserIdColor" />
+
+                </span></div>
+
+</td>
+<td width="40%"><div>    <span>
+                    <input auto-complete ui-items="names" ng-disabled="names.length==0 " ng-model="linkOpponentId">
+
+               </span>
+                
+                <span> 
+                   Checked : White,   UnChecked : Black
+                    <input type="checkbox" ng-disabled="names.length==0" ng-model="OpponentIdColor"  />
+                </span></div>
+
+</td>
+    <td>
+           <button class="btn btn-default" ng-disabled="names.length==0" data-ng-click="sendInvitaion(linkUserId,UserIdColor,linkOpponentId,OpponentIdColor,tournamentRound);">Invite</button>
+    </td>
+</tr>
+</tbody>
+       
+</table>
+    <div data-ng-if="isWinner">
+   
+        <h6> <b>Tournament Winner Name : {{names[0]}} </b></h6></div>
+                         </div></div>
+
+<h4>Previous Round</h4>
+<div class="white_block">
+    <div class="table-responsive adm_cl">
+        <table class="table table-bordered" data-ng-if="linkDetails.length>0">
+            <thead>
+                <th>Round (s)</th>
+                <th>Matches</th>
+          
+                 <th>Winner</th>
+            </thead>
+<tbody data-ng-repeat="r in linkDetails">
+<tr>
+<td width="20%"><h5 class="txt_bold">Round ( {{r.RoundNo}} )</h5></td>
+<td width="60%"><h5> {{r.Username}}  Vs {{r.OpponentUsername}}</h5></td>
+
+    <td>
+         <div>{{r.winnerName}}</div>
+           <div></div>
+    </td>
+</tr>
+ <tr data-ng-if="linkDetails.length==0">
+    
+           <span data-ng-if="linkDetails.length==0"> Please Wait for Tournament Matches</span>
+   
+ </tr>
+  
+
+<!--<tr>
+<td width="20%"><h5 class="txt_bold">Round (2)</h5></td>
+<td width="60%"><h5>Ankit Vs Saif</h5></td>
+<td width="40%"><div><a href="#" class="btn btn-warning btn-sm">Play Match</a> <a href="#" class="btn btn-info btn-sm">Already Played</a></div></td>
+</tr>-->
+</tbody>
+</table>
+
+    </div></div>
+        </fieldset>
+
+    <span data-ng-if="allTournamentPlayers.length==0" style="color:red;font-weight:bold;" > Please Wait for Players to be Joinded !</span>
+</div></div></div>
+</div></div>
+</section>
+
+
+
+
+
+
+
+<!-- 
+<div class="col-sm-12" style="border:3px solid red" data-ng-show="allTournamentPlayers.length>0">
+        
+    <div class="row">
+          <div class="col-sm-2">
+                 Round : ( {{tournamentRound}} )
+      <select>
+             <option  value="0">Select Round</option>
+              <option   data-ng-repeat="tr in totalRound" value="{{tr}}">{{tr}}</option>
+         </select>
+                  </div>
+            <div class="col-sm-4">
+               <span>                 
+                    <input ng-disabled="names.length==0 " auto-complete ui-items="names" ng-model="linkUserId" />
+                   {{linkUserId}}
+
+               </span>
+          
+                <span>
+                     Checked : White,   UnChecked : Black
+                    <input type="checkbox" ng-disabled="names.length==0 "  ng-model="UserIdColor" />
+
+                </span>
+
+
+      </div>
+        
+                <div class="col-sm-4">
+                <span>
+                    <input auto-complete ui-items="names" ng-disabled="names.length==0 " ng-model="linkOpponentId">
+
+               </span>
+                
+                <span> 
+                   Checked : White,   UnChecked : Black
+                    <input type="checkbox" ng-disabled="names.length==0" ng-model="OpponentIdColor"  />
+                </span>
+
+
+  
+      </div>
+         <div class="col-sm-2">
+             <button class="btn btn-default" ng-disabled="names.length==0" data-ng-click="sendInvitaion(linkUserId,UserIdColor,linkOpponentId,OpponentIdColor,tournamentRound);">Invite</button>
+         </div>
+        </div>
+    </div>
+-->
+
+
+
+
+     <!--   <li data-ng-repeat="a in allTournamentPlayers">
+         Username:    {{a.Username}}
+        </li>-->
+ 
+
+<!--<div id="simulateRound">
+    simulateRound
+</div>
+
+<div id="simulateTournament">
+    simulateTournament
+</div>
+
+<div id="resetBracket">
+    resetBracket
+</div>
+
+<div id="bracket" >
+
+</div>
+
+<div>
+    <div data-ng-repeat="match in tournamentMatches">
+        <div data-ng-repeat="g in match" >
+            <div>
+              <!--  <div data-ng-repeat="i in g" >                   
+                        {{i}}   Vs 
+                </div>
+                <div  data-ng-click="joinTournamentStart(g);">
+                    {{g[0]}} VS {{g[1]}}
+                </div>
+               
+          </div>
+        </div>
+    </div>
+</div>-->

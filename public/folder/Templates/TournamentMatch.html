@@ -1,0 +1,143 @@
+﻿
+
+<div class="col-sm-7">
+<div class="left_block">
+<div class="movement_block"><div class="row">
+<div class="col-xs-9">
+<span class="to_move_piece"><img src="Images/piece_1_w.png" alt="piece"></span><span class="clr_brown noneed"><span class="txt_bold">{{userTwo}} - {{userIdTwo}} </span></span>
+<span class="ale_rt" data-ng-hide="isYourMove">Make Your Move</span>
+</div>
+<div class="col-xs-3"><div class="txt_right">
+<h3><span class="clock pull-left"><img src="Images/clock.gif" alt="clock"></span><span class="second_block">18s</span></h3></div></div>
+</div></div>
+
+<div class="progress skill-bar" data-ng-if="!isPointBased">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{blackcounter}}" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+            </div>
+
+
+
+
+<span data-ng-if="userTwo!=null"  style="font-weight:bold;"></span>
+   
+<span data-ng-if="!isPointBased">Timer : {{blackcounter}} ( {{blackcounterMin}} Min. : {{blackcounterSec}} Sec. )</span>
+ <br /><label>Black Point {{blackPoint}}</label>
+<div id="{{UserIdNewParams}}"  data-ng-init="init()"  data-ng-readonly="true" ></div>
+
+
+<span data-ng-if="!isPointBased">Timer : {{whitecounter}} ( {{whitecounterMin}} Min. : {{whitecounterSec}} Sec.)</span>
+<br />
+
+<label>White Point {{whitePoint}} </label>
+
+
+    </div>
+<div class="movement_block"><div class="row">
+<div class="col-xs-8">
+<span class="to_move_piece"><img src="Images/piece_1_b.png" alt="piece"></span>
+    <span class="clr_brown">
+        <span  data-ng-if="userOne!=null" style="font-weight:bold;">{{userOne}} - {{userIdOne}}</span>
+        <span class="ale_rt" data-ng-show="isYourMove">Make Your Move</span>
+                                                                               </span>
+</div>
+<div class="col-xs-4"><div class="txt_right"><span class="flip_icon" data-ng-click="flipBoard()"><img src="Images/flip_icon.png" alt="flip"></span></div></div>
+</div></div>
+</div>
+<div class="col-sm-5">
+    <div class="right_block">
+
+
+
+
+<div class="panel panel-warning">
+    <div class="panel-heading">
+    <h3 class="panel-title">History</h3>
+    <div class="hist_icons_block"><div class="row" align="center">
+    <div class="col-xs-6"><img src="Images/piece_1_w.png" alt="piece"></div>
+    <div class="col-xs-6"><img src="Images/piece_1_b.png" alt="piece"></div>
+    </div></div>
+    </div>
+        <div class="panel-body scroll_this_cont">
+    <div class="hist_block">
+        <div class="row"  >
+    <div class="col-xs-6" data-ng-repeat="h1 in history track by $index" >
+    <div class="hist_value_block" style="padding:0px;" >
+        <img data-ng-if="h1.color=='w'"  src="../../img/chesspieces/wikipedia/w{{h1.piece}}.png"  style="height:20px"  />
+          <img  data-ng-if="h1.color=='b'"  src="../../img/chesspieces/wikipedia/b{{h1.piece}}.png"  style="height:20px" />
+         <span >{{h1.from}} : {{h1.to}}</span></div>
+        <!--<span data-ng-show="h1.color=='w' && h1.captured!='undefined'">{{h1.san}}</span> -->
+       
+
+    </div>
+    <!--<div class="col-xs-6" data-ng-if="h1.color=='b'" > 
+        <div class="hist_value_block" > <span >{{h1.from}} : {{h1.to}}</span></div>
+
+    </div>-->
+  
+    </div>
+    </div></div>
+      </div>
+<div class="panel panel-warning">
+    <div class="panel-heading">
+    <h3 class="panel-title">Captured</h3>
+    <div class="hist_icons_block">
+        <div class="row" align="center">
+    <div class="col-xs-6"><img src="Images/piece_1_w.png" alt="piece"></div>
+    <div class="col-xs-6"><img src="Images/piece_1_b.png" alt="piece"></div>
+    </div></div>
+    </div>
+    <div class="panel-body scroll_this_cont">
+    <div class="hist_block">
+        <div class="row" data-ng-repeat="h in historyCapture track by $index">
+    <div class="col-xs-6" >
+    <div class="hist_value_block"  data-ng-if="h.color=='w' && h.captured!=null">
+   
+  <img  src="../../img/chesspieces/wikipedia/b{{h.captured}}.png"  style="height:20px" />
+    </div>
+        </div>
+        <div class="col-xs-6" >
+            <div class="hist_value_block" data-ng-if="h.color=='b' && h.captured!=null" >
+          
+    <img  src="../../img/chesspieces/wikipedia/w{{h.captured}}.png"  style="height:20px"  />
+    </div>
+           
+    </div>
+
+      
+             
+
+   
+
+    
+
+    </div>
+    </div>
+    </div>
+</div>
+
+<!--<a href="#" class="btn btn-default btn-block">Online Existing Table</a>
+<a href="#" class="btn btn-default btn-block">Available Table To Join</a>-->
+</div></div>
+
+    
+             <script>
+
+                 function onLoadScroller() {
+
+                     $(".scroll_this_cont").mCustomScrollbar({
+                         setHeight: 120,
+                         theme: "minimal-dark"
+                     });
+
+                  
+
+                 };
+                 setTimeout(function () {
+                     onLoadScroller();
+                 }, 250);
+
+	</script>
+
+
+

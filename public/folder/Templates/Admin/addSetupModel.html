@@ -1,0 +1,31 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Time Based Chess Table Setup</h4>
+</div>
+<div class="modal-body">
+      
+                <label>User Id</label> 
+            <input type="text" data-ng-model="table.UserId" />    
+    <br />  
+            <label>Total Time Limit</label>
+            <input type="text" data-ng-model="table.TotalTimeLimit" /> 
+    <br />
+              <label>Per Move Time Limit</label>  
+              <input type="text" data-ng-model="table.TotalTimePerMoveLimit" />
+    <br /> 
+            <label>Is Default Settings</label> 
+             <input type="checkbox"  data-ng-model="table.IsDefault" />
+        <br />
+
+    <label>Winning Type</label> 
+          <select data-ng-model="table.WinningMethod" >
+                  <option value="0" selected="selected">Select Type</option>
+                  <option data-ng-repeat="w in winningType" value="{{w}}">{{w}}</option>
+              </select>
+    </div> 
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="$dismiss()">Close</button>
+    <button type="button"  data-ng-show="!isEdit" class="btn btn-primary" ng-click="saveSetup(table,1);$close()">Save changes</button>
+        <button type="button" data-ng-show="isEdit"class="btn btn-primary" ng-click="saveSetup(table,2);$close()">Update changes</button>
+</div>
